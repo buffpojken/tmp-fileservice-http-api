@@ -1,0 +1,60 @@
+{
+  "name": "FileServiceHttpAPI",
+  "version": "0.0.1",
+  "description": "Investigation into file service HTTP API",
+  "main": "app.js",
+  "dependencies": {
+    "async": "1.5.2",
+    "bluebird": "3.3.4",
+    "body-parser": "~1.15.0",
+    "connect": "~3.4.1",
+    "cors": "^2.7.1",
+    "express": "~4.13.4",
+    "glob": "7.0.3",
+    "gulp": "^3.9.1",
+    "method-override": "^2.3.5",
+    "moment": "2.12.0",
+    "multer": "1.1.0",
+    "node-uuid": "1.4.7",
+    "supertest-as-promised": "^3.1.0",
+    "underscore": "~1.8.3",
+    "winston": "2.2.0"
+  },
+  "engines": {
+    "node": "5.10.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "merge-stream": "^1.0.0",
+    "mocha": "2.4.5",
+    "should": "8.2.2",
+    "sinon": "^1.17.3",
+    "supertest": "1.1.0",
+    "supervisor": "0.9.1"
+  },
+  "scripts": {
+    "test": "./scripts/test.sh",
+    "start": "./node_modules/.bin/node-supervisor -- --harmony_destructuring start.js"
+  },
+  "repository": "git@github.com:lineducation/pr2-core.git",
+  "contributors": [
+    {
+      "name": "Daniel Sundström",
+      "email": "daniel.sundstrom@lineducation.se",
+      "url": "www.danielsundstrom.com"
+    },
+    {
+      "name": "Bambi Vigren",
+      "email": "bambi@lineducation.se",
+      "url": ""
+    },
+    {
+      "name": "Pekka Åkerström",
+      "email": "per-erik.akerstrom@lineducation.se",
+      "url": ""
+    }
+  ]
+}
