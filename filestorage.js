@@ -21,7 +21,6 @@ class FileManager{
 		})).then(files => {
 			return {
 				"files": _.map(files, function(file){
-					console.log(file);
 					return {
 						name: 			file.originalname, 
 						size: 			file.size, 
@@ -35,10 +34,10 @@ class FileManager{
 	}
 
 	store(file, data){
-		const destination = path.join(__dirname, file.destination, data.context); 
+		const destination = path.join(file.destination, data.context); 
 		return mkdirp(destination).then(() => {
 			return new Promise(function(resolve, reject){
-				fs.rename(path.join(__dirname, file.path), path.join(destination, file.originalname), function(err){
+				fs.rename(path.join(file.path), path.join(destination, file.originalname), function(err){
 					if(err){
 						reject(err);
 					}else{
