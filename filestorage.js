@@ -59,7 +59,7 @@ class FileManager{
 		// this file is allowed to be deleted!
 		console.log(destination);
 		return new Promise(function(resolve, reject){
-			fs.unlink(path.join(".", destination.path), function(err){
+			fs.unlink(path.join(__dirname, destination.path), function(err){
 				if(err){
 					reject(err);
 				}else{
