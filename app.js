@@ -27,7 +27,7 @@ app.use(bodyParse.urlencoded({
 	extended: true
 }));
 
-var upload = multer({dest: 'uploads/'}); 
+var upload = multer({dest: './uploads/'}); 
 
 app.use("/uploads", express.static(path.join(__dirname, 'uploads')));
 
