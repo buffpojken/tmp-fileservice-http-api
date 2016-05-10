@@ -69,6 +69,7 @@ router.delete('/delete', cors(), validateSignature, function(req, res){
 		res.status(200); 
 		res.end();
 	}).catch(err => {
+		console.log(err)
 		if(err.errno == -2){
 			res.status(204); 
 		}else{
