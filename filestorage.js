@@ -48,8 +48,8 @@ class FileManager{
 			})
 		}).then(() => {
 			file.location 		= destination
-			file.url 					= "http://localhost:4000" + path.join("/uploads", data.context, file.originalname)
-			file.deletionURL	= "http://localhost:4000" + path.join("/delete", data.context, file.originalname)
+			file.url 					= "https://files.pr2.linlabs.se" + path.join("/uploads", data.context, file.originalname)
+			file.deletionURL	= "https://files.pr2.linlabs.se" + path.join("/delete", data.context, file.originalname)
 			return file
 		});
 	}
