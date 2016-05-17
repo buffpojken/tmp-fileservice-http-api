@@ -22,6 +22,8 @@ GLOBAL.logger = new(winston.Logger)({
 
 var app = express();
 
+app.use(cors());
+
 app.use(methodOverride('_method'))
 app.use(bodyParse.urlencoded({
 	extended: true

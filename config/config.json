@@ -1,0 +1,12 @@
+{
+  "development": {
+  	"base_url": "http://localhost:4000"
+  },
+  "test": {
+  },
+  "staging": {
+  	"base_url": "https://files.pr2.linlabs.se"
+  },
+  "production": {
+  }
+}

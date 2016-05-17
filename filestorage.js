@@ -7,6 +7,8 @@ var mkdirp 			= Promise.promisify(require('mkdirp'));
 var path 				= require('path'); 
 var url 				= require('url'); 
 var redis 			= require('redis'), client = redis.createClient();
+var env					= process.env.NODE_ENV || 'development';
+var config			= require(__dirname + '/config/config.json')[env];
 
 
 class FileManager{
@@ -47,8 +49,8 @@ class FileManager{
 			})
 		}).then(() => {
 			file.location 		= destination
-			file.url 					= "https://files.pr2.linlabs.se" + path.join("/uploads", data.context, file.originalname)
-			file.deletionURL	= "https://files.pr2.linlabs.se" + path.join("/delete", data.context, file.originalname)
+			file.url 					= config.base_url + path.join("/uploads", data.context, file.originalname)
+			file.deletionURL	= config.base_url + path.join("/delete", data.context, file.originalname)
 			return file
 		});
 	}
