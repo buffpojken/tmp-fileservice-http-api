@@ -7,7 +7,7 @@ var mkdirp 			= Promise.promisify(require('mkdirp'));
 var path 				= require('path'); 
 var url 				= require('url'); 
 var redis 			= require('redis'), client = redis.createClient();
-var env					= process.env.NODE_ENV || 'development';
+var env					= process.env.NODE_ENVIRONMENT || 'development';
 var config			= require(__dirname + '/config/config.json')[env];
 
 
